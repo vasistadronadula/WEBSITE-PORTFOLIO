@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family:"Ubuntu", sans-serif;
+    outline: none;
+    scroll-behavior: smooth;
+}
+html
+{
+    overflow-x: hidden;
+}
+body{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+#video-background{
+     
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
+        max-height:100; /* Cover the entire background area */
+        z-index: -1; /* Place behind other content */
+}
+
+.navbar{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+
+/* From https://css.glass */
+background: rgba(239, 224, 224, 0.17);
+
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.4px);
+-webkit-backdrop-filter: blur(5.4px);
+border: 1px solid rgba(239, 224, 224, 0.336);
+}
+.navbar h1{
+    font-weight: bold;
+    margin-left: 20px;
+    color: rgb(255, 255, 252);
+    margin: 15px 20px 10px 57px;
+    padding-right: 300px;
+    
+}
+.links{
+    list-style: none;
+    display: inline-flex;
+    gap: 2rem;
+    margin-right: 20px;
+}
+.links a{
+    text-decoration: none;
+    color: rgb(255, 255, 250);
+    transition: 0.2s ease;
+}
+.links a:hover{
+    border-bottom: 3px solid rgb(255, 255, 255);
+}
+section{
+    height: 100vh;
+    padding: 15rem 8% 15rem;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.figure img{
+
+    width: 25vw;
+    border: 3px solid rgba(255, 0, 0, 0.858);
+    border-radius: 51% 49% 48% 52% / 49% 49% 51% 51%;
+    animation: borderanimation 5s linear infinite;
+ }
+ 
+ @keyframes borderanimation{
+     0%{
+         border-radius: 51% 49% 48% 52% / 49% 49% 51% 51%;
+     }
+     35%{
+         border-radius: 60% 40% 57% 43% / 40% 54% 56% 60%;
+     }
+ 
+     65%{
+         border-radius: 67% 33% 68% 32% / 27% 70% 38% 73%;
+     }
+     100%
+     {
+         border-radius: 51% 49% 48% 52% / 49% 49% 51% 51%;
+     }
+ }
+ .container .ico {
+    gap: 2.7rem;
+    display: inline-flex;
+    margin: 15px;
+}
+
+.container h1{
+    color: rgba(255, 255, 255, 0.986);
+    margin: 11px;
+}
+.ico  i{
+    padding: 5px;
+    background-color: transparent;
+    color:rgb(255, 253, 253);
+    border:0.5px solid rgb(255, 255, 255);
+    font-size:32px;
+    border-radius:50px;
+    cursor: pointer;
+
+}
+.container .down {
+    display: flex;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 40px;
+    width: 100px;
+   justify-content: space-around;
+   align-items: center;
+
+  
+}
+.down  i{
+
+    color:rgb(255, 255, 255);
+    font-size:32px;
+}
+.down a{
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+.ico i:hover{
+    background-color: rgb(0, 4, 7);
+    color:rgb(255, 0, 38)
+}
+
+
+
+
+
+.container h3{
+    color: rgb(255, 255, 255);
+    margin: 11px;
+
+}
+.container p{
+    margin: 11px;
+    color: rgba(255, 255, 255, 0.932);
+    line-height:20px;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(22, 19, 19); 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 42, 84); 
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; 
+  }
+  #about{
+ padding: 6%;
+  }
+  .hea h1{
+    color: #ffffff;
+    text-align: center;
+  }
+.details
+{
+    display: flex;
+    margin-top: 60px;
+}
+.details p{
+    line-height: 30px;
+    font-size: 17px;
+    padding-top: 80px;
+    color: #ffffff;
+
+
+}
+#services{
+ padding: 6%;
+}
+.ser {
+    margin: 15px;
+}
+.ser h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.services .content{
+ display: flex;
+ width: 100%;
+ grid-row: 3;
+}
+.content .web,.app,.design{
+    border: 1px solid black;
+    height: 400px;
+    width: 500px;
+    margin: 10px;
+    display:block;
+    background: rgba(239, 224, 224, 0.17);
+
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.4px);
+-webkit-backdrop-filter: blur(5.4px);
+border: 1px solid rgba(239, 224, 224, 0.69);
+    border-radius: 40px;
+    justify-content:space-around;
+    text-align: center;
+}
+.services .app:hover,.design:hover,.web:hover{
+    font-size: large;
+}
+.services .app:hover,.design:hover,.web:hover{
+
+    font-size: large;
+}
+.services  .app:hover,.design:hover,.web:hover{
+    font-size:large;
+}
+
+.content  h1{
+    color: #ef4b1e;
+    margin: 10px;
+    text-align: center;
+}
+.content  p{
+    color: #fff9fde5;
+    margin: 10px;
+    text-align: center;
+    line-height: 25px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+#web.active p{
+    display: block;
+}
+#web.active #span::before{
+    content:'show less';
+}
+.content i{
+    font-size: 28px;
+   margin: 10px;
+   color: #ff0048;
+}
+#span::before{
+    content: 'Read More';
+    color: #ffffff;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 40px;
+    padding: 8px;
+}
+#design.active p{
+    display: block;
+}
+#design.active #span1::before{
+    content:'show less';
+}
+#span1::before{
+    content: 'Read More';
+    color: #ffffff;
+    cursor: pointer;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 40px;
+    padding: 8px;
+}
+#app.active p{
+    display: block;
+}
+#app.active #span2::before{
+    content:'show less';
+}
+#span2::before{
+    content: 'Read More';
+    color: #ffffff;
+    cursor: pointer;
+    border: 1px solid rgb(255, 246, 246);
+    border-radius: 40px;
+    padding: 8px;
+    
+}
+
+
+
+.co {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display:block;
+}
+form{
+    width:700px;
+   height:400px;
+   margin-left: 200px;
+   margin-top: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
+    backdrop-filter: blur(4px);
+
+    
+}
+
+#contact{
+    padding: 6%;
+}
+.contain h2{
+    color: #fffdfd;
+    margin: 20px;
+    text-align: center;
+}
+.contain form{
+    align-items: center;
+    justify-content: center;
+    display:flex;
+}
+
+form label{
+    float: left;
+}
+ form input , form textarea{
+   border: 1px solid rgb(255, 236, 236);
+ outline: none;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.721);
+    backdrop-filter: blur(2px);
+    
+ }
+ button{
+    padding: 9px;
+    margin: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(212, 37, 145);
+    backdrop-filter: blur(2px);
+    border-radius: 10px;
+    
+ }
+ footer {
+    background-color: #131010;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+    padding-right: 80px;
+  }
+  
+  .footer-section {
+    margin: 10px;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 7px;
+    gap: 4px;
+  }
+  
+  .footer-section a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    margin: 5px 0;
+    
+  }
+  
+  .footer-section a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    margin-top: 7px;
+  }
+  .fein{
+    color: rgb(255, 39, 244);
+  }
